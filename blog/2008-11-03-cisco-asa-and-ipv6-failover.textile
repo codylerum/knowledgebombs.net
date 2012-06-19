@@ -1,0 +1,11 @@
+---
+title: Cisco ASA & IPv6 Failover
+layout: blog
+author: Ken Mix
+email: ken.mix@gmail.com
+---
+p. When we began planning the upgrade of our corporate infrastructure to fully support IPv6 in a dual-stack configuration, one of the earliest stumbling blocks came from an unexpected source – our Cisco ASA security appliances. By the time we’d begun our changes Cisco ASAs and PIXes had already been supporting IPv6 for a full three years (since release 7.0 in mid-2005), so I was expecting a feature-complete IPv6 product.
+
+p. Initial configuration went smoothly (via the CLI, as the ASDM does not currently support IPv6 commands), but IPv6 connectivity through the ASA was spotty at best. Digging into the problem, we discovered that the Primary and Standby ASA were both transmitting router advertisements with the same priority, and that most of the hosts were sending their non-local packets to the link-local address of the Standby ASA, which was duly discarding them. A Cisco TAC request confirmed that IPv6 failover configuration will not be supported until 8.2. Timeframe for release of 8.2? Unknown.
+
+p. How could IPv6 and critical enterprise functionality such as Failover be mutually exclusive, especially after three years and one full major release (IPv6 functionality was introduced in 7.0 – as of this writing the current version is 8.04)? This tells me that NO enterprises (0.000%) running Cisco ASAs have deployed IPv6 in their existing production environments. Since Cisco is the market share leader in the firewall segment, one has to wonder what percentage of North American companies have even begun planning for the approaching IPv4 exhaustion.

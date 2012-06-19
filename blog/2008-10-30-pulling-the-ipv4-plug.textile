@@ -1,0 +1,19 @@
+---
+title: Pulling the IPv4 Plug
+layout: blog
+author: Cody Lerum
+email: cody.lerum@gmail.com
+---
+p. Just as a little experiment tonight I disabled my IPv4 stack on Vista and went entirely IPv6 native (no tunneling). Of course I got what I expected, a completly unusable system.
+
+*What worked:*
+
+* Windows domain and Exchange - Thanks to recent upgrade of our company to Server 2008 and Exchange 2007 everything worked internally. File sharing, DNS, authentication...all worked like a charm.
+* ipv6.google.com - Loaded right up and I was able to search. Also if you edit your host file and add a record for mail.google.com pointing to 2001:4860:0:2001::68 (at least for right now) you can access Gmail. I'm pretty sure that this works for MAPS and DOCS. Doesn't work for TALK however.
+* www.arin.net - For all your IPv4/IPv6 needs...at least until they run out.
+* www.kame.net - Love to see that turtle dance.
+
+*What didn't work:*
+* Basically everything else.
+
+p. If IPv4 is going to run out in 2-3 years, the content providers have a long way to go.

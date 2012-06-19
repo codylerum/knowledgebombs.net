@@ -1,0 +1,11 @@
+---
+title: Kudos to Netflix
+layout: blog
+author: Cody Lerum
+email: cody.lerum@gmail.com
+---
+p. Netflix appears to be the first content provider to publish anything worthwhile to the IPv6 side of the Internet.
+
+p. Netflix members can now manage their rental queues and stream content over IPv6.
+
+p. If you're one of the few IPv6 enabled users out there, point your browser to "ipv6.netflix.com":http://ipv6.netflix.com and give it a spin.

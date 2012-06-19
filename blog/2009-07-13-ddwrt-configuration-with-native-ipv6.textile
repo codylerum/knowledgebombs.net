@@ -1,0 +1,48 @@
+---
+title: DD-WRT Configuration With Native IPv6 Connectivity
+layout: blog
+author: Ken Mix
+email: ken.mix@gmail.com
+---
+p. As I was helping a friend enable IPv6 on a DD-WRT WAP recently, it reminded me that there are few resources in the wild that will walk a newbie through the configuration steps if they are lucky enough to have native IPv6 connectivity (or some other reason to avoid tunnel configuration directly on the WAP). The wireless routers that support DD-WRT provide an inexpensive path to IPv6 connectivity for residential users and, fortunately, the process is fairly straightforward.
+
+p. 1. First of all, you'll need a WAP that is capable of running DD-WRT. Although I've tried a couple of brands, my favorite in terms of cost, availability and ease of conversion is the Linksys (Cisco) "WRT54GL":http://www.linksysbycisco.com/US/en/products/WRT54GL.
+
+p. <span style="font-weight:bolder;color:red">NOTE: The next step could potentially render an otherwise-working WAP inoperable. Perform at your own risk!</style>
+
+p. 2. Next, you'll need a version of DD-WRT that supports IPv6. I've had good luck with v2.3 SP2, so that's what I'm going to recommend. Before you can install the DD-WRT standard image, however, we must first upgrade the WAP to a DD-WRT standard mini image from the standard Linksys firmware upgrade page in the WAP's web interface. I'd recommend the following for this upgrade:
+
+p. "http://www.dd-wrt.com/dd-wrtv2/downloads/stable/dd-wrt.v23%20SP2/mini/dd-wrt.v23_mini_generic.bin":http://www.dd-wrt.com/dd-wrtv2/downloads/stable/dd-wrt.v23%20SP2/mini/dd-wrt.v23_mini_generic.bin
+
+p. If you think it is hung, wait a couple more minutes. Patience now can save you a real headache later. Once the mini image has loaded (the new admin username is root), you can upgrade once more -- this time to a release that supports IPv6. Again, my recommended version is v2.3 SP2. I've had several WRT54GLs with &gt;2 years uptime on this release, which in and of itself justifies a DD-WRT conversion. The standard generic release can be found here:
+
+p. "http://www.dd-wrt.com/dd-wrtv2/downloads/stable/dd-wrt.v23%20SP2/standard/dd-wrt.v23_generic.bin":http://www.dd-wrt.com/dd-wrtv2/downloads/stable/dd-wrt.v23%20SP2/standard/dd-wrt.v23_generic.bin
+
+p. Again, patience is a virtue. If you do end up bricking your WAP, some useful recovery advice can be found on the "DD-WRT Wiki":http://www.dd-wrt.com/wiki/index.php/Linksys_WRT54G/GL/GS/GX#WRT54GL.
+
+p. 3. Once the WAP is up and running the standard DD-WRT release, we're ready to go. Under the Administration-&gt;Management tab, select "Enable" for IPv6 Support. As soon as you click "Enable", the section expands to include configuration information for Radvd. Select the "Enable" button for Radvd enabled, and then enter the following in the Radvd config text box (customized according to your configuration, of course):
+
+bc.. interface br0 {
+AdvSendAdvert on;
+prefix 2607:F3D0:XXXX:YYYY::/64 {
+AdvOnLink on;
+AdvAutonomous on;
+AdvRouterAddr on;
+};
+};
+
+p. Click the "Save Settings" button when you are done to do just that.
+
+p. 4. Now we'll want to make sure that our static IPv6 addresses are persistent across reboots. To do this, click into Administration-&gt;Commands. Enter the following text (again customized for your config), and then click on the Save Startup button.
+
+bc.. sleep 5
+ip addr add 2607:F3D0:XXXX::ZZ02/124 dev vlan1
+ip addr add 2607:F3D0:XXXX:YYYY::1/64 dev br0
+ip -6 route add 0::/0 via 2607:F3D0:XXXX::ZZ01/124 dev vlan1
+kill -HUP $(cat /var/run/radvd.pid)
+
+p. (br0 is the LAN interface and vlan1 is the WAN)
+
+p. If you want to test your configuration before saving the startup script, you can click the Run Commands for realtime execution.
+
+p. That's it! You now have the enviable privilege of telling people that you are running a native IPv6 hotspot.

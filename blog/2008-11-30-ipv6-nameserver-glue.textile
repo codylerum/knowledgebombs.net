@@ -1,0 +1,11 @@
+---
+title: IPv6 Nameserver Glue
+layout: blog
+author: Cody Lerum
+email: cody.lerum@gmail.com
+---
+p. Looks like we will be moving our domain registrations to another provider shortly. We are currently with Dotster for cost and ease of administration (mostly cost), but when I inquired about adding IPv6 glue for our nameserver records they were without clue. After repeated requests I finally got through to a tech who proclaimed that nobody is using IPv6 and they have no demand.
+
+p. SIXXS.net confirms this. Looks like Network Solutions might be getting a little more business.
+
+p. Now if only a few thousand other people moved their registrations for this reason we might pop up on the radar.
