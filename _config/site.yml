@@ -1,10 +1,10 @@
-disqus: v4tov6
-disqus_generate_id: true
-google_analytics: UA-5839460-1
 profiles:
   development:
     base_url: http://stewie:4242
   production:
+    disqus: v4tov6
+    disqus_generate_id: true
+    google_analytics: UA-5839460-1
     base_url: http://www.v4tov6.com
     deploy:
       host: awestruct@tin.clearfly.net
