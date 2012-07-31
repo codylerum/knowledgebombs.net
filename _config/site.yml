@@ -1,6 +1,4 @@
 profiles:
-  development:
-    base_url: http://stewie:4242
   production:
     disqus: v4tov6
     disqus_generate_id: true
