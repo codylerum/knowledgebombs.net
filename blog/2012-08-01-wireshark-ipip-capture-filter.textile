@@ -14,7 +14,7 @@ h3. Byte Offset Notation
 
 p. Byte offset notation is exactly what the name says -- basically you specify a protocol, the offset in bytes from the beginning of the header and the number of bytes to check.  Although a bit complicated at first glance, they are one of the most powerful tools I've yet found with regards to Wireshark; a filter designed using byte offset notation could filter traffic based upon ANY type of ANY packet.  An example is worth a thousand words:
 
-p. To capture all IP packets with a TTL of 1:
+p. To capture all IP packets with a TTL of 2:
 
 p. <code>ip[8,1] == 2</code>
 
