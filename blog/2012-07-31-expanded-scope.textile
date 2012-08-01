@@ -1,0 +1,15 @@
+---
+title: Expanding the Scope of the Blog
+layout: blog
+author: Ken Mix
+email: ken.mix@gmail.com
+---
+p. For the folks following this blog (both of you) it's probably become readily apparent that:
+
+# IPv6 is a pipe dream, _or_
+# After all of the initial testing and configuration, it turns out the demand just isn't there yet, _or_
+# We're pretty lazy (or busy -- take your pick)
+
+p. In reality, it's a bit of each.  While we know IPv6 isn't _really_ a pipe dream, and that IPv6 traffic increases every day, the portion of our workdays involving IPv6 equals exactly 0.00%.  If we want slightly more involvement, we could always work at Google; according to their "IPv6 statistics":http://www.google.com/ipv6/statistics.html, IPv6-enabled Google users account for 0.68% of their workload at the time of this writing...
+
+p. While we're certain there will eventually be more IPv6 content, we felt it would be handy to have a repository for the rest of the sweet nuggets of info we dig up or develop in the course of our jobs.  Hence, knowledgebombs.net.  Enjoy!
