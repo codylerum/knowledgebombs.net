@@ -1,0 +1,31 @@
+---
+title: Wireshark IP in IP Capture Filter
+layout: blog
+author: Ken Mix
+email: ken.mix@gmail.com
+---
+p. As anybody working on the back end of VoIP knows, sometimes a packet capture is the quickest way to get to the root of a problem.  If traffic volumes are high, this can be a painful exercise for you, the network and the PC or server hosting your analysis program (we prefer "Wireshark":http://www.wireshark.org).  Fortunately, our "AcmePacket":http://www.acmepacket.com SBCs provide a handy "packet-trace" feature that allows you to specify traffic by interface and source and/or destination IP and port, encapsulates the specified packets in an "IP-IP":http://en.wikipedia.org/wiki/IP_in_IP tunnel and sends them to the capture server of my choice.
+
+p. If we are only running a single capture, we can then set up a capture filter of <code>ip proto 4</code> to ensure that our file only contains the encapsulated traffic.  Wireshark, being the unbelievably useful tool that it is, then allows us to use our standard display filters, such as <code>sip</code> or <code>ip.addr == 192.168.0.1</code>, regardless of the fact that there is an extra IP header on each packet.  All's well, right?
+
+p. Not quite.  Unfortunately, there comes a time in every tech's life when they're required to troubleshoot the _intermittent issue_.  And sometimes these types of issues require a rolling file capture of, say, 50 files at 50MB each ("ring buffer" capture, in Wireshark terminology).  When this happens, a simple capture filter of <code>ip proto 4</code> means that your already annoyingly-large files are going to contain a bunch of packets from unrelated captures.  When dealing with IP-IP packets, using the simple "host 192.168.0.1" capture filter isn't an option, as it only looks at the outside IP header.  So, what's the solution?
+
+h3. Byte Offset Notation
+
+p. Byte offset notation is exactly what the name says -- basically you specify a protocol, the offset in bytes from the beginning of the header and the number of bytes to check.  Although a bit complicated at first glance, they are one of the most powerful tools I've yet found with regards to Wireshark; a filter designed using byte offset notation could filter traffic based upon ANY type of ANY packet.  An example is worth a thousand words:
+
+p. To capture all IP packets with a TTL of 1:
+
+p. <code>ip[8,1] == 2</code>
+
+p. _*Note:* All headers start with byte zero. The example above captures all packets where the TTL (starting at byte 8 of the IP header, and containing 1 byte) equals 2. If you're not too familiar with IP header structure, Wikipedia has a usable breakdown "here":http://en.wikipedia.org/wiki/IPv4#Packet_structure._
+
+p. To capture based upon the source and destination address of the inner IP header of an IP in IP encapsulated packet, you simply add 20 bytes to each of your values.  So, if the source address of an IP packet starts at byte 12 and the destination address starts at byte 16, you would use 32 and 36 for the starting byte values.  You'll also want to convert your IP addresses to hex:
+
+p. IP *192.168.0.1* converted to hexadecimal = *0xC0A80001*
+
+p. So to capture both directions of a conversation, you'll want to capture where the source OR destination address equals 0xC0A80001:
+
+p. <code>ip[32:4]==0xC0A80001 || ip[36:4]==0xC0A80001</code>
+
+p. Now that we've got these down, we find ourselves running more captures, more often.  I'm not sure if that's a good thing, but YMMV.
