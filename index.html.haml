@@ -4,29 +4,29 @@ description: Random bits of knowledge that we don't want to forget and that migh
 ---
 .row-fluid
   .span12
-    - 5.times do |n|
-      - if site.blogs[n] != nil
+    - for blog in page.blogs
+      - if blog != nil
         .row-fluid
           .span12.floating-page.blog-page
             %h3
-              %a{:href=>site.blogs[n].url}= site.blogs[n].title
+              %a{:href=>blog.url}= blog.title
             .blog-content
-              = site.blogs[n].content
+              = blog.content
               %div{:style => "clear:both"}
-                - if site.blogs[n].tags
+                - if blog.tags
                   .tags
                     %span.title
                       tags:
-                    -for tag in site.blogs[n].tags
+                    -for tag in blog.tags
                       %a{:href => "/blog/tags/#{tag}"}
-                        -if (tag != site.blogs[n].tags.last)
+                        -if (tag != blog.tags.last)
                           = "#{tag}, "
                         -else
                           = "#{tag} "
               .pull-right
-                %h6 #{site.blogs[n].author} - #{site.blogs[n].date.strftime( '%B %d, %Y' )}
+                %h6 #{blog.author} - #{blog.date.strftime( '%B %d, %Y' )}
               .clearfix
-              = site.blogs[n].disqus_comments_count
-              = site.blogs[n].disqus_comments_link
-
-
+              = blog.disqus_comments_count
+              = blog.disqus_comments_link
+%div{:style => "text-align: center"}
+  = page.blogs.links

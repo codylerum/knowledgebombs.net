@@ -3,7 +3,7 @@ title: T Minus 774 Days Untl IPv4 Exhaustion
 layout: blog
 author: Cody Lerum
 email: cody.lerum@gmail.com
-tags: [ IPv6, IANA Exhaustion ]
+tags: [ IPv6, IANA ]
 ---
 p. According to Geoff Huston's "IPv4 Address Report":http://www.potaroo.net/tools/ipv4/index.html there are approximately 774 days until there are no more IPv4 addresses for the IANA (Internet Assigned Numbers Authority) to assign. This means that the last 5 remaining /8's will have been assigned to the RIRs (such as ARIN). Of course this is just a projection and the actual date could come sooner if there is a rush on the last remaining addresses out there.
 
