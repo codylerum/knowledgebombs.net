@@ -3,6 +3,7 @@ title: Linux IPv6 MTU issues
 layout: blog
 author: Cody Lerum
 email: cody.lerum@gmail.com
+tags: [ IPv6, Linux, Ubuntu, CENTOS ]
 ---
 p. I'm seeing an annoying issue with Ubuntu 8.10 and IPv6. It appears that the Linux OS is sending packets larger than 1500 bytes out of a gigibit Ethernet interfaces which is configured for a 1500 byte MTU.
 

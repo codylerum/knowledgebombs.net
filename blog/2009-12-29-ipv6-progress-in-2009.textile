@@ -3,6 +3,7 @@ title: IPv6 Progress in 2009 (or lack thereof)
 layout: blog
 author: Cody Lerum
 email: cody.lerum@gmail.com
+tags: [ IPv6, Cisco, Netflix ]
 ---
 p. As this year comes to an end, our march towards IPv6 seems to be a little bit of a mixed bag. On one hand it appears that great strides have been made in raising the awareness that IPv6 is coming and there likely isn't much that can be done to slow it down. On the other hand it feels like vendor support for IPv6 has either slowed or, in some cases, taken a step backwards.
 

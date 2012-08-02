@@ -13,6 +13,7 @@
       }
     %link{ :rel=>'stylesheet', :type=>'text/css', :href=>"#{site.base_url}/stylesheets/styles.css" }
     %link{ :rel=>'stylesheet', :type=>'text/css', :href=>"#{site.base_url}/stylesheets/theme.css" }
+    %link{ :rel=>'stylesheet', :type=>'text/css', :href=>"#{site.base_url}/stylesheets/blog.css" }
     %link{ :rel=>'alternate',"type" => "application/atom+xml", "title" => "Blog Feed", "href" => "#{site.base_url}/blog/feed.atom"}
     /[if lt IE 9]
       %script{ :type=>'text/javascript', :src=>'//html5shim.googlecode.com/svn/trunk/html5.js' }
@@ -91,6 +92,13 @@
                           -posts.each do |post|
                             %li
                               %a{:href => site.base_url + post.url, :title=> post.title}= trim(post.title,40)
+          .span12
+            .label.text-center
+              Tags
+            .well.well-small
+              .row-fluid
+                .tags
+                  = site.blogs_tag_cloud
 
       %hr
       %footer

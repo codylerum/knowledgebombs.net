@@ -3,13 +3,14 @@ title: The protocol that cried wolf
 layout: blog
 author: Cody Lerum
 email: cody.lerum@gmail.com
+tags: [ IPv6 ]
 ---
 p. As we inch ever closer to IPv4 depletion and possible network chaos, the networking community as a whole seems to sitting back and watching with a simple smirk. Sure, there are pockets of activity; announcements from ARIN, presentations at policy conventions and the ramblings of blogs such as this. But one would be hard-pressed to say that any more than about one or two percent of the community is taking note...which is probably about the current percentage of IPv6 deployment.
 
 p. To confirm my belief I asked some random CLECs, ILECs and ISPs at a recent trade show where they were with IPv6 and how soon they thought general deployment would occur. Every one reacted basically the same way:
 
-# Somebody within their organization is looking into it at a high level, but nobody’s expecting deployment anytime soon.
-# They don't believe demand will be coming anytime soon. Many of the people I talked to mentioned that everybody has been saying for the last decade that IPv6 was coming in 2-3 years. Since it still hasn’t happened they aren't too concerned that they will get behind the eight ball.
+# Somebody within their organization is looking into it at a high level, but nobody's expecting deployment anytime soon.
+# They don't believe demand will be coming anytime soon. Many of the people I talked to mentioned that everybody has been saying for the last decade that IPv6 was coming in 2-3 years. Since it still hasn't happened they aren't too concerned that they will get behind the eight ball.
 # No customers are asking for it yet and, other than a few test sites, no real content is accessible via IPv6.
 
 p. The vendors and distributors at this trade show echoed similar sentiments: fringe elements of the community have been pushing IPv6 and asking for us to support it, but our manpower is better spent producing products and features that customers need today.

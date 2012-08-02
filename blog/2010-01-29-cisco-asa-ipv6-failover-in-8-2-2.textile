@@ -3,6 +3,7 @@ title: "Cisco ASA IPv6 Failover in 8.2(2): So Far, So Good..."
 layout: blog
 author: Ken Mix
 email: ken.mix@gmail.com
+tags: [ IPv6, Cisco, ASA, Juniper, SSG ]
 ---
 p. After several months of empty promises, missed dates and missing features, we'd pretty much resigned ourselves to waiting until ASA version 8.3(x) (ETA TBD) for IPv6 failover support. So imagine our surprise when the 8.2(2) "release notes":http://www.cisco.com/en/US/docs/security/asa/asa82/release/notes/asarn82.html#wp337399 showed the following new feature:
 

@@ -12,6 +12,17 @@ description: Random bits of knowledge that we don't want to forget and that migh
               %a{:href=>site.blogs[n].url}= site.blogs[n].title
             .blog-content
               = site.blogs[n].content
+              %div{:style => "clear:both"}
+                - if site.blogs[n].tags
+                  .tags
+                    %span.title
+                      tags:
+                    -for tag in site.blogs[n].tags
+                      %a{:href => "/blog/tags/#{tag}"}
+                        -if (tag != site.blogs[n].tags.last)
+                          = "#{tag}, "
+                        -else
+                          = "#{tag} "
               .pull-right
                 %h6 #{site.blogs[n].author} - #{site.blogs[n].date.strftime( '%B %d, %Y' )}
               .clearfix

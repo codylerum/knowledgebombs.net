@@ -3,6 +3,7 @@ title: Wireshark IP in IP Capture Filter
 layout: blog
 author: Ken Mix
 email: ken.mix@gmail.com
+tags: [ VoIP, Wireshark, AcmePacket ]
 ---
 p. As anybody working on the back end of VoIP knows, sometimes a packet capture is the quickest way to get to the root of a problem.  If traffic volumes are high, this can be a painful exercise for you, the network and the PC or server hosting your analysis program (we prefer "Wireshark":http://www.wireshark.org).  Fortunately, our "AcmePacket":http://www.acmepacket.com SBCs provide a handy "packet-trace" feature that allows you to specify traffic by interface and source and/or destination IP and port, encapsulates the specified packets in an "IP-IP":http://en.wikipedia.org/wiki/IP_in_IP tunnel and sends them to the capture server of my choice.
 

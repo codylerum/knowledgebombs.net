@@ -3,6 +3,7 @@ title: Ubuntu IPv6 Only Torrents
 layout: blog
 author: Cody Lerum
 email: cody.lerum@gmail.com
+tags: [ IPv6, Linux, Ubuntu ]
 ---
 p. If you didn't notice, Ubuntu 8.10 was released today. As usual the mirrors and torrents were flooded with eager downloaders.
 

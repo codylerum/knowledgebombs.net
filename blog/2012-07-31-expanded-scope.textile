@@ -3,6 +3,7 @@ title: Expanding the Scope of the Blog
 layout: blog
 author: Ken Mix
 email: ken.mix@gmail.com
+tags: [ IPv6, Blog ]
 ---
 p. For the folks following this blog (both of you) it's probably become readily apparent that:
 

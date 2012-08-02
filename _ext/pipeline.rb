@@ -6,8 +6,9 @@ Awestruct::Extensions::Pipeline.new do
   helper UtilHelper
   extension Awestruct::Extensions::Disqus.new()
   extension Awestruct::Extensions::Posts.new( '/blog', :blogs )
-  extension Awestruct::Extensions::Atomizer.new( :blogs, '/blog/feed.atom', :feed_title=>'Outjected Blog', :content_url=> "/blog.html" )
   extension BlogsMap.new
+  extension Awestruct::Extensions::Tagger.new( :blogs, '/index', '/blog/tags', :per_page=>10 )
+  extension Awestruct::Extensions::TagCloud.new( :blogs, '/blog/tags/index.xhtml' )
+  extension Awestruct::Extensions::Atomizer.new( :blogs, '/blog/feed.atom', :feed_title=>'Knowledge Bombs Blog' )
   extension Awestruct::Extensions::Sitemap.new()
 end
-

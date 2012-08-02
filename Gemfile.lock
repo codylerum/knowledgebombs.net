@@ -1,6 +1,6 @@
 GIT
   remote: git://github.com/awestruct/awestruct.git
-  revision: 006e997a2cf16616b494bd11d8b8a5a1dc6a55aa
+  revision: ce1d32ac030023ff479b9f521a494e8dc2743a69
   specs:
     awestruct (0.4.6)
       RedCloth (~> 4.2.9)

@@ -3,6 +3,7 @@ title: 2010 Rocky Mountain IPv6 Summit Scheduled
 layout: blog
 author: Ken Mix
 email: ken.mix@gmail.com
+tags: [ IPv6 ]
 ---
 p. The Rocky Mountain IPv6 Task Force (RMv6TF) has announced details of their 3rd annual Rocky Mountain IPv6 Summit. The summit, scheduled for May 26-27 in Denver, promises to be an excellent opportunity to learn about IPv6 technologies and trends, and also to meet other people in various stages of IPv6 deployment and/or planning.
 

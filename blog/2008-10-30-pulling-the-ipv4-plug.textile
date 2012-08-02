@@ -3,6 +3,7 @@ title: Pulling the IPv4 Plug
 layout: blog
 author: Cody Lerum
 email: cody.lerum@gmail.com
+tags: [ IPv6, Microsoft, Windows ]
 ---
 p. Just as a little experiment tonight I disabled my IPv4 stack on Vista and went entirely IPv6 native (no tunneling). Of course I got what I expected, a completly unusable system.
 

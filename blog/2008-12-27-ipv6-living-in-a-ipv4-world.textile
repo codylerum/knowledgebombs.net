@@ -3,6 +3,7 @@ title: IPv6 living in a IPv4 world
 layout: blog
 author: Cody Lerum
 email: cody.lerum@gmail.com
+tags: [ IPv6 ]
 ---
 p. Good article on how improperly implemented 6in4 tunnels are holding back the v6 content providers and giving IPv6 a bad rap.
 
