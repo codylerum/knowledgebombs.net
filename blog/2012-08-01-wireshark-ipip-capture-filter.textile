@@ -35,7 +35,11 @@ p. To capture based upon the source and destination address of the inner IP head
  function convert() {
   var ip = document.getElementById('ipnum').value;
   var dotted = /^(\d|[01]?\d\d|2[0-4]\d|25[0-5])\.(\d|[01]?\d\d|2[0-4]\d|25[0-5])\.(\d|[01]?\d\d|2[0-4]\d|25[0-5])\.(\d|[01]?\d\d|2[0-4]\d|25[0-5])$/;
-  if (ip.match(dotted)) ip = "0x" + d2h(dot2num(ip));
+  if (ip.match(dotted))
+  {
+   ip = d2h(dot2num(ip));
+   ip = "0x" + ip.toUpperCase();
+  }
   document.getElementById('ipnum').value = ip;
  }
 
