@@ -31,7 +31,7 @@
           %ul.nav.pull-right
             %li
               %a{:href=>"#{site.base_url}/blog/feed.atom", :style=> "padding-top:5px"}
-                %img{:src=>"#{site.base_url}/images/rss_32.png"}
+                %img{:src=>"#{site.base_url}/images/rss_32.png", :alt=>"Knowledge Bombs RSS Feed"}
     .main-container
       .row-fluid
         .span9
@@ -49,7 +49,7 @@
               .row-fluid
                 .span4
                   %a{:href=>'http://en.gravatar.com/codylerum'}
-                    %img.floating-page{:src=> 'http://www.gravatar.com/avatar/' + Digest::MD5.hexdigest( 'cody.lerum@gmail.com' )}
+                    %img.floating-page{:src=> 'http://www.gravatar.com/avatar/' + Digest::MD5.hexdigest( 'cody.lerum@gmail.com' ), :alt => 'Cody Lerum'}
                 .span8
                   <strong>Cody Lerum</strong>
                   %br/
@@ -57,8 +57,8 @@
                   <a href="https://twitter.com/codylerum" class="twitter-follow-button" data-show-count="false">Follow @codylerum</a>
                   <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
                   </div>
-                  <div style="padding-top:5px">
-                  <a href="http://www.linkedin.com/in/codylerum"><img src="http://www.linkedin.com/img/webpromo/btn_viewmy_160x25.png" width="160" height="25" border="0" alt="View Cody Lerum's profile on LinkedIn"></a>
+                  <div class="linkedIn" style="padding-top:5px">
+                  <a href="http://www.linkedin.com/in/codylerum"><img src="http://www.linkedin.com/img/webpromo/btn_viewmy_160x25.png" width="160" height="25" alt="View Cody Lerum's profile on LinkedIn"></a>
                   </div>
           .span12
             .label.text-center
@@ -67,31 +67,31 @@
               .row-fluid
                 .span4
                   %a{:href=>'http://en.gravatar.com/kmix'}
-                    %img.floating-page{:src=> 'http://www.gravatar.com/avatar/' + Digest::MD5.hexdigest( 'ken.mix@gmail.com' )}
+                    %img.floating-page{:src=> 'http://www.gravatar.com/avatar/' + Digest::MD5.hexdigest( 'ken.mix@gmail.com' ), :alt => 'Ken Mix'}
                 .span8
                   <strong>Ken Mix</strong>
                   %br/
-                  <div style="padding-top:5px">
-                  <a href="http://www.linkedin.com/in/kenmix"><img src="http://www.linkedin.com/img/webpromo/btn_viewmy_160x25.png" width="160" height="25" border="0" alt="View Kenneth Mix's profile on LinkedIn"></a>
+                  <div class="linkedIn" style="padding-top:5px">
+                  <a href="http://www.linkedin.com/in/kenmix"><img src="http://www.linkedin.com/img/webpromo/btn_viewmy_160x25.png" width="160" height="25" alt="View Kenneth Mix's profile on LinkedIn"></a>
                   </div>
           .span12
             .label.text-center
               Blog Archive
             .well.well-small.blog-archive
               %ul.unstyled#years
-              -site.blog_map.each do |year, months|
-                %li.year{:id=>"year_#{year}"}
-                  %a{:data => {:toggle => "collapse", :target => "#year_#{year} > ul.year", :parent=>"#years"}, :href => "##{year}"}
-                    = year
-                  %ul.year.collapse
-                    -months.each do |month, posts|
-                      %li.month{:id=>"month_#{month}_#{year}"}
-                        %span.month= Date::MONTHNAMES[month]
-                        %span.count= "(#{posts.size})"
-                        %ul.month
-                          -posts.each do |post|
-                            %li
-                              %a{:href => site.base_url + post.url, :title=> post.title}= trim(post.title,40)
+                -site.blog_map.each do |year, months|
+                  %li.year{:id=>"year_#{year}"}
+                    %a{:data => {:toggle => "collapse", :target => "#year_#{year} > ul.year", :parent=>"#years"}, :href => "##{year}"}
+                      = year
+                    %ul.year.collapse
+                      -months.each do |month, posts|
+                        %li.month{:id=>"month_#{month}_#{year}"}
+                          %span.month= Date::MONTHNAMES[month]
+                          %span.count= "(#{posts.size})"
+                          %ul.month
+                            -posts.each do |post|
+                              %li
+                                %a{:href => site.base_url + post.url, :title=> post.title}= trim(post.title,40)
           .span12
             .label.text-center
               Tags
@@ -104,6 +104,6 @@
       %footer
         %p
           &copy; Knowledge Bombs #{Date.today.year} baked with
-          %a{:href => "http://www.awestruct.org", :target=> "_"} Awestruct
+          %a{:href => "http://www.awestruct.org", :target=> "_blank"} Awestruct
     - if site.google_analytics
       = google_analytics_async
