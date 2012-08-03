@@ -23,6 +23,34 @@ p. _*Note:* All headers start with byte zero. The example above captures all pac
 
 p. To capture based upon the source and destination address of the inner IP header of an IP in IP encapsulated packet, you simply add 20 bytes to each of your values.  So, if the source address of an IP packet starts at byte 12 and the destination address starts at byte 16, you would use 32 and 36 for the starting byte values.  You'll also want to convert your IP addresses to hex:
 
+<notextile>
+
+<script type="text/javascript">
+ function d2h(d) {return d.toString(16);}
+
+ function dot2num(dot) {
+  var d = dot.split('.');
+  return ((((((+d[0])*256)+(+d[1]))*256)+(+d[2]))*256)+(+d[3]);}
+
+ function convert() {
+  var ip = document.getElementById('ipnum').value;
+  var dotted = /^(\d|[01]?\d\d|2[0-4]\d|25[0-5])\.(\d|[01]?\d\d|2[0-4]\d|25[0-5])\.(\d|[01]?\d\d|2[0-4]\d|25[0-5])\.(\d|[01]?\d\d|2[0-4]\d|25[0-5])$/;
+  if (ip.match(dotted)) ip = "0x" + d2h(dot2num(ip));
+  document.getElementById('ipnum').value = ip;
+ }
+
+</script>
+
+<form name="myForm">
+ <div>
+  <br />
+  <b>Enter An IP Here to Convert to Hex:</b>&nbsp;<input type="text" id="ipnum" size="15" style="margin-bottom:0px;">&nbsp;&nbsp;<input type="button" value="Convert" onclick="convert();return false;">
+  <br />
+ </div>
+</form>
+
+</notextile>
+
 p. IP *192.168.0.1* converted to hexadecimal = *0xC0A80001*
 
 p. So to capture both directions of a conversation, you'll want to capture where the source OR destination address equals 0xC0A80001:
