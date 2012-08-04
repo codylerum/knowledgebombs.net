@@ -1,6 +1,6 @@
 GIT
   remote: git://github.com/codylerum/awestruct.git
-  revision: e41894280acd5b0f57d1f89ec924720c0b44ebee
+  revision: a9eb6c418a49eaa53ce4606a78f68d6f1bb75f6e
   branch: clearfly
   specs:
     awestruct (0.4.6)
