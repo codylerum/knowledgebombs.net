@@ -1,6 +1,7 @@
 GIT
-  remote: git://github.com/awestruct/awestruct.git
-  revision: 12eef80905b422c32261ae38a7e113649a40d8a1
+  remote: git://github.com/codylerum/awestruct.git
+  revision: e41894280acd5b0f57d1f89ec924720c0b44ebee
+  branch: clearfly
   specs:
     awestruct (0.4.6)
       RedCloth (~> 4.2.9)
