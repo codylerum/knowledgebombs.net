@@ -1,3 +1,8 @@
+RewriteEngine On
+RewriteCond %{HTTP_HOST} ^v4tov6.com$ [OR]
+RewriteCond %{HTTP_HOST} ^www.v4tov6.com$
+RewriteRule (.*)$ http://www.knowledgebombs.net/$1 [R=301,L]
+
 Redirect /2009/07/dd-wrt-configuration-with-native-ipv6.html /blog/2009/07/13/ddwrt-configuration-with-native-ipv6.html
 Redirect /2009/06/cisco-asa-ipv6-failover-update.html /blog/2009/06/02/cisco-asa-and-ipv6-failover-update.html
 Redirect /2010/01/cisco-asa-ipv6-failover-in-822-so-far.html /blog/2010/01/29/cisco-asa-ipv6-failover-in-8-2-2.html
