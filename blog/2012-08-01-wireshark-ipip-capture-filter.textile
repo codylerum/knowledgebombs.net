@@ -48,7 +48,7 @@ p. To capture based upon the source and destination address of the inner IP head
 <form name="myForm">
  <div>
   <br />
-  <b>Enter An IP Here to Convert to Hex:</b>&nbsp;<input type="text" id="ipnum" size="15" style="margin-bottom:0px;">&nbsp;&nbsp;<input type="button" value="Convert" onclick="convert();return false;">
+  <b>Enter An IP Here to Convert to Hex:</b>&nbsp;<input type="text" id="ipnum" size="15" style="margin-bottom:0px;">&nbsp;&nbsp;<input class="btn" type="button" value="Convert" onclick="convert();return false;">
   <br />
  </div>
 </form>
