@@ -43,14 +43,16 @@ p. Now that we've got these down, we find ourselves running more captures, more 
  function convert() {
   var ip = $('#ipnum').val();
   var dotted = /^(\d|[01]?\d\d|2[0-4]\d|25[0-5])\.(\d|[01]?\d\d|2[0-4]\d|25[0-5])\.(\d|[01]?\d\d|2[0-4]\d|25[0-5])\.(\d|[01]?\d\d|2[0-4]\d|25[0-5])$/;
-  if (ip.match(dotted))
-  {
+  if (ip.match(dotted)) {
    ip = d2h(dot2num(ip));
    ip = "0x" + ip.toUpperCase();
+   $('#ipnum').val(ip);
+   $('#convertedHelper').text('ip[32:4]==' + ip + ' || ip[36:4]==' + ip);
+   $('#converterHelperDiv').show();
   }
-  $('#ipnum').val(ip);
-  $('#convertedHelper').text('ip[32:4]==' + ip + ' || ip[36:4]==' + ip);
-  $('#converterHelperDiv').show();
+  else {
+    $('#ipnum').val('');
+  }
  }
 
 </script>
