@@ -2,7 +2,10 @@
 %html
   %head
     %meta{ :charset=>'utf-8' }
-    %title Knowledge Bombs
+    -if page.title
+      %title #{page.title}
+    -else
+      %title Knowledge Bombs
     -if page.description != nil
       %meta{:name=>"description", :content=> page.description}
     %meta{ :name=>'viewport', :content=>'width=device-width, initial-scale=1.0' }
