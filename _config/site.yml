@@ -8,4 +8,4 @@ profiles:
     deploy:
       host: awestruct@tin.clearfly.net
       path: /var/www/v4tov6.com
-      uncommited: true
+      uncommitted: true
