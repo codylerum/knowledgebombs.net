@@ -13,17 +13,18 @@ description: Random bits of knowledge that we don't want to forget and that migh
             .blog-content
               = blog.content
               .clearfix
-                - if blog.tags
-                  .tags
-                    %span.title
-                      tags:
-                    -for tag in blog.tags
-                      %a.label.label-info.text-center{:href => "/blog/tags/#{tag}"} #{tag}
-              .pull-right
-                %h6 #{blog.author} - #{blog.date.strftime( '%B %d, %Y' )}
+                .pull-left
+                  - if blog.tags
+                    .tags
+                      %span.title
+                        tags:
+                      -for tag in blog.tags
+                        %a.label.label-info.text-center{:href => "/blog/tags/#{tag}"} #{tag}
+                .pull-right
+                  %h6 #{blog.author} - #{blog.date.strftime( '%B %d, %Y' )}
               .clearfix
-              = blog.disqus_comments_count
-              = blog.disqus_comments_link
+                = blog.disqus_comments_count
+                = blog.disqus_comments_link
 .row-fluid.text-center
   .span12
     - for p in page.blogs.pages
