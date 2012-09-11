@@ -1,7 +1,6 @@
 profiles:
   production:
     disqus: v4tov6
-    disqus_generate_id: true
     google_analytics: UA-5839460-1
     change_frequency: weekly
     base_url: http://www.knowledgebombs.net
