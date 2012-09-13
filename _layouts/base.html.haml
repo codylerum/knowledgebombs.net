@@ -82,7 +82,7 @@
               .label.text-center
                 Blog Archive
               .well.well-small.blog-archive
-                %ul.unstyled#years
+                %ul#years
                   -site.blog_map.each do |year, months|
                     %li.year{:id=>"year_#{year}"}
                       %a{:data => {:toggle => "collapse", :target => "#year_#{year} > ul.year", :parent=>"#years"}, :href => "##{year}"}
