@@ -17,8 +17,12 @@ layout: base
                 tags:
               -for tag in page.tags
                 %a.label.label-info.text-center.tag_link{:href => "/blog/tags/#{tag}"} #{tag}
+        .pull-left{:style=>'padding-left:5px;'}
+          %a{:href=>'http://plus.google.com/101925478681357288309?rel=author', :style=>'text-decoration:none;'}
+            %img{:src=>'http://ssl.gstatic.com/images/icons/gplus-32.png', :alt=>'Google+', :style=>'border:0;width:20px;height:20px;'}
         .pull-right
           %h6 #{page.author} - #{page.date.strftime( '%B %d, %Y' )}
+
       .clearfix
         .comments
           = page.disqus_comments
