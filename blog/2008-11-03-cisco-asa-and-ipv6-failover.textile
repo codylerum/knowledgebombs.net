@@ -2,7 +2,7 @@
 title: Cisco ASA & IPv6 Failover
 layout: blog
 author: Ken Mix
-email: ken.mix@gmail.com
+email: ken@mix.co
 tags: [ IPv6, Cisco, ASA ]
 ---
 p. When we began planning the upgrade of our corporate infrastructure to fully support IPv6 in a dual-stack configuration, one of the earliest stumbling blocks came from an unexpected source – our Cisco ASA security appliances. By the time we’d begun our changes Cisco ASAs and PIXes had already been supporting IPv6 for a full three years (since release 7.0 in mid-2005), so I was expecting a feature-complete IPv6 product.

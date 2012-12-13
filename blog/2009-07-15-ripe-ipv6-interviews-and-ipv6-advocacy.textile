@@ -2,7 +2,7 @@
 title: RIPE IPv6 Interviews & IPv6 Advocacy
 layout: blog
 author: Ken Mix
-email: ken.mix@gmail.com
+email: ken@mix.co
 tags: [ IPv6, RIPE ]
 ---
 p. For those interested in the experiences of people that have been deploying and operating in an IPv6 world for quite some time, "RIPE":http://www.ripe.net/ has posted a few interviews with 'net savvy folks on their "YouTube channel":http://www.youtube.com/user/RIPENCC, with promises of more to come.

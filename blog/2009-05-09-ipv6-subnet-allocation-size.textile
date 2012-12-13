@@ -2,7 +2,7 @@
 title: IPv6 Subnet Allocation Size - The Debate (Finally) Rages
 layout: blog
 author: Ken Mix
-email: ken.mix@gmail.com
+email: ken@mix.co
 tags: [ IPv6, ARIN, Addressing ]
 ---
 p. It's been over a decade now since IPv6 was approved as a standard, and people are still arguing about fundamental issues such as subnet allocation sizes and other customer-facing best practices. In my mind, the increased tempo of the argument is a very positive sign, albeit later in the game than most people would have preferred. The fact that so many people are arguing about such a basic operational issue as customer allocations, and that they are soliciting opinions and addressing plans from folks who've already rolled out IPv6 in their networks is a good indicator that more people are finally getting closer to actual IPv6 deployment. Even though with there is still not 100% consensus on some IPv4 "best practices", it will be interesting to see how things shake out -- especially on some of the larger networks.

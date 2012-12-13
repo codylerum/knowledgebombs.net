@@ -2,7 +2,7 @@
 title: DD-WRT Configuration With Native IPv6 Connectivity
 layout: blog
 author: Ken Mix
-email: ken.mix@gmail.com
+email: ken@mix.co
 tags: [ IPv6, DD-WRT ]
 ---
 p. As I was helping a friend enable IPv6 on a DD-WRT WAP recently, it reminded me that there are few resources in the wild that will walk a newbie through the configuration steps if they are lucky enough to have native IPv6 connectivity (or some other reason to avoid tunnel configuration directly on the WAP). The wireless routers that support DD-WRT provide an inexpensive path to IPv6 connectivity for residential users and, fortunately, the process is fairly straightforward.
