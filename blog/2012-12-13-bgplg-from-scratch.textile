@@ -3,9 +3,9 @@ title: Building an OpenBGPD bgplg Looking Glass from Scratch
 layout: blog
 author: Ken Mix
 email: ken@mix.co
-tags: [ BGP, bgplg, OpenBGPD, OpenBSD, Looking Glass ]
+tags: [ BGP, bgplg, OpenBGPD, OpenBSD ]
 ---
-p. Anybody who's spent time troubleshooting BGP advertisements and/or Internet reachability issues has probably made use of one or many <notextile><a href="http://en.wikipedia.org/wiki/Looking_Glass_servers" target=<"_blank">looking glass servers</a></notextile>.  These are servers, usually managed and maintained by ISPs, which provide a set of useful troubleshooting tools (ping, traceroute) and outputs (show ip bgp) that allow you to view the Internet from the perspective of their network.  Large, geographically diverse carriers often allow you to select a router you would like to troubleshoot from, which is useful if the issue you are troubleshooting seems to be localized to a specific area.
+p. Anybody who's spent time troubleshooting BGP advertisements and/or Internet reachability issues has probably made use of one or many <notextile><a href="http://en.wikipedia.org/wiki/Looking_Glass_servers" target="_blank">looking glass servers</a></notextile>.  These are servers, usually managed and maintained by ISPs, which provide a set of useful troubleshooting tools (ping, traceroute) and outputs (show ip bgp) that allow you to view the Internet from the perspective of their network.  Large, geographically diverse carriers often allow you to select a router you would like to troubleshoot from, which is useful if the issue you are troubleshooting seems to be localized to a specific area.
 
 p. As a network guy, I've spent A LOT of time on various looking glasses, and I've even set a few up -- albeit many years ago.  Internet routing tables can be chaotic at times and, in my opinion, there can never be too many looking glasses.  So when the time came to set up a new looking glass at my day job, I figured it would be a good opportunity to take some notes to make it easier for the next guy or gal to get who is willing to show the world what the Internet looks like from their perspective.  After a bit of research, I decided that I would install bgplg, a clean, robust OpenBGPD add-on.
 
