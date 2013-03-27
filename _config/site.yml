@@ -1,3 +1,5 @@
+encoding: UTF-8
+
 profiles:
   production:
     disqus: v4tov6
