@@ -1,11 +1,11 @@
 ---
 layout: base
 ---
-.row-fluid
-  .span1
-    %img.floating-page{:src=> 'http://www.gravatar.com/avatar/' + Digest::MD5.hexdigest( page.email ), :alt=>"Profile Image"}
+.row
+  .col-md-1
+    %img.floating-page.img-responsive{:src=> 'http://www.gravatar.com/avatar/' + Digest::MD5.hexdigest( page.email ), :alt=>"Profile Image"}
     %a{:href=>"http://plus.google.com/#{site.authors[page.email].google_plus}?rel=author", :style=>"display:hidden"}
-  .span11
+  .col-md-11
     %h3
       #{page.title}
     .floating-page.blog-content
@@ -19,7 +19,7 @@ layout: base
               -for tag in page.tags
                 %a.label.label-info.text-center.tag_link{:href => "/blog/tags/#{tag}"} #{tag}
         .pull-right
-          %h6 #{page.author} - #{page.date.strftime( '%B %d, %Y' )}
+          %h5 #{page.author} - #{page.date.strftime( '%B %d, %Y' )}
 
       .clearfix
         .comments

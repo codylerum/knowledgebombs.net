@@ -57,7 +57,7 @@ p. Now that we've got these down, we find ourselves running more captures, more 
 
 </script>
 
-<div class="well well-small">
+<div class="well well-sm">
 <form name="myForm">
  <div>
   <br />
@@ -66,7 +66,7 @@ p. Now that we've got these down, we find ourselves running more captures, more 
  </div>
 </form>
 
-<div id="converterHelperDiv" style="display:none" class="centered">
+<div id="converterHelperDiv" style="display:none" class="center-block">
 <p><b>Just paste this into Wireshark: </b><code id="convertedHelper"></code></p>
 </div>
 </div>

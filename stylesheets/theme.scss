@@ -11,29 +11,18 @@
   border-radius: 5px;
 }
 
-.text-center {
-    text-align:center;
-}
-
-.centered {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-}
-
 .blog-content {
-    margin: 5px;
-    padding:10px;
-    margin-left:15px;
+  padding:5px;
+  margin-left:5px;
 }
 
 .blog-page {
-    margin-bottom:30px;
-    padding-left:15px;
+  margin-bottom:30px;
+  padding-left:15px;
 }
 
 .blog-archive > ul {
-  margin-left:0px !important;
+  margin-left:0px;
 }
 
 .blog-archive ul {
@@ -64,12 +53,19 @@
   text-align : center;
 }
 
-.tags {
-  text-transform: uppercase;
-}
-
 .ellipsis-overflow {
   text-overflow:ellipsis;
   overflow:hidden;
   white-space:nowrap;
+}
+
+.side-panel > .label {
+  display:block;
+  width:100%;
+  padding-right:0px;
+  padding-left:0px;
+}
+
+.comments {
+  margin-top:20px;
 }
