@@ -1,10 +1,14 @@
-Development
+Setting up the Environment
 --------------------
+Currently working with Ruby 2.0
 
+1. gem install bundle
 1. bundle update
 
-bundle exec awestruct -d --force
+Development
+--------------------
+awestruct -d --force
 
 Deploying to Production
 -----------------------
-bundle exec awestruct -P production --deploy --force --generate
+awestruct -P production --deploy --force --generate
