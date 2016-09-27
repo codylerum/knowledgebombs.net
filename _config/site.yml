@@ -3,7 +3,7 @@ encoding: UTF-8
 profiles:
   production:
     disqus: v4tov6
-    google_analytics: UA-5839460-1
+    g_analytics: true
     change_frequency: weekly
     base_url: https://www.knowledgebombs.net/
     deploy:
