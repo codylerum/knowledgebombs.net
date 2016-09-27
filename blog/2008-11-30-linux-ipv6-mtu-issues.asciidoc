@@ -1,0 +1,18 @@
+---
+title: Linux IPv6 MTU issues
+layout: blog
+author: Cody Lerum
+email: cody.lerum@gmail.com
+tags: [ IPv6, Linux, Ubuntu, CENTOS ]
+---
+I'm seeing an annoying issue with Ubuntu 8.10 and IPv6. It appears that the Linux OS is sending packets larger than 1500 bytes out of a gigibit Ethernet interfaces which is configured for a 1500 byte MTU.
+
+This is easy to reproduce with a dual stack machine. Just SCP/FTP a file down via IPv4 and one via IPv6. You will only see about 10% of the IPv4 throughput on the v6 transfer. A tcpdump or wireshark will confirm that packets sourced from the Linux machine are larger than 1500 bytes....sometimes 10x the size. When the network connecting these two machines only supports 1500 bytes, all these oversized packets get dropped.
+
+I've opened a case with the ubuntu guys -- https://bugs.launchpad.net/ubuntu/+source/linux/+bug/254622[https://bugs.launchpad.net/ubuntu/+source/linux/+bug/254622^]
+
+However, I'm seeing similar results on CENTOS 5.2 so I'm thinking it's less distro specific.
+
+I haven't really heard of anyone else noticing this which makes we wonder if I'm missing something painfully simple in the configuration, or nobody is really serving any IPv6 content off a server with 2.6 kernel.
+
+Anyone else seeing this?

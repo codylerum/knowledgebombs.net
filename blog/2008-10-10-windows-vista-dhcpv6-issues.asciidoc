@@ -1,0 +1,22 @@
+---
+title: Windows Vista DHCPv6 Issues
+layout: blog
+author: Cody Lerum
+email: cody.lerum@gmail.com
+tags: [ IPv6, Microsoft, Windows, DHCP, DNS ]
+---
+While working through an internal deployment at the company where I work something pecurlier started to happen when we lit up an IPv6 DHCP service.
+
+What happened was the DHCP client on Vista had trouble parsing the DNS Suffix Search List which was sent by the DHCP server. The DNS suffix of corp.company.com was sent but the OS showed
+
+[%hardbreaks]
+DNS Suffix Search List:
+corp
+company
+com
+
+So, instead of searching on corp.company.com it tried each of them in succession -- first com, then company, then corp.
+
+I sent an email to Sean Siler who is the Microsoft IPv6 program manager (http://blogs.technet.com/ipv6/[IPv6 Blog^]) and he has confirmed that this is a known bug which will be fixed in SP2...possibly sooner.
+
+*I have confirmed this is fixed in the latest SP2 Beta (10/29/08)*

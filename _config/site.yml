@@ -5,8 +5,8 @@ profiles:
     disqus: v4tov6
     google_analytics: UA-5839460-1
     change_frequency: weekly
-    base_url: http://www.knowledgebombs.net
+    base_url: http://www.knowledgebombs.net/
     deploy:
-      host: awestruct@tin.clearfly.net
-      path: /var/www/v4tov6.com
+      host: awestruct@oxygen.clearfly.net
+      path: /var/www/knowledgebombs.net
       uncommitted: true

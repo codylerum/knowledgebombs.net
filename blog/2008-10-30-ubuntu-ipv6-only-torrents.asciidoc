@@ -1,0 +1,14 @@
+---
+title: Ubuntu IPv6 Only Torrents
+layout: blog
+author: Cody Lerum
+email: cody.lerum@gmail.com
+tags: [ IPv6, Linux, Ubuntu ]
+---
+If you didn't notice, Ubuntu 8.10 was released today. As usual the mirrors and torrents were flooded with eager downloaders.
+
+Canonical was nice enough to setup an IPv6 only tracker (http://ipv6.torrent.ubuntu.com:6969/[http://ipv6.torrent.ubuntu.com:6969^])
+
+Unfortunately it looks like only 27 downloads have completed in the 12+ hours it's been released.
+
+It's a start, but when the first response to any networking problem on the support forum is to "DISABLE IPv6" I tend to think we have a long road left to travel.

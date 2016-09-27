@@ -1,0 +1,18 @@
+---
+title: "Cisco ASA IPv6 Failover in 8.2(2): So Far, So Good..."
+layout: blog
+author: Ken Mix
+email: ken@mix.co
+tags: [ IPv6, Cisco, ASA, Juniper, SSG ]
+---
+After several months of empty promises, missed dates and missing features, we'd pretty much resigned ourselves to waiting until ASA version 8.3(x) (ETA TBD) for IPv6 failover support. So imagine our surprise when the 8.2(2) http://www.cisco.com/en/US/docs/security/asa/asa82/release/notes/asarn82.html#wp337399[release notes^] showed the following new feature:
+
+'''
+
+*IPv6 Support in Failover Configurations* -- IPv6 is now supported in Failover configurations. You can assign active and standby IPv6 addresses to interfaces and use IPv6 addresses for the failover and Stateful failover interfaces.
+
+The following commands were modified: *failover interface ip, ipv6 address.*
+
+'''
+
+Keeping in mind past disappointments, we were cautiously optimistic that we might finally be able to swing our IPv6 traffic from a spare Juniper SSG (100Mbps interfaces) to our ASA 5520 failover pair (Gigabit Ethernet interfaces). The upgrade was flawless and, sure enough, there is now a spot to specify a standby IPv6 address. After a week of light testing, I can report that so far things are running as one would expect. Time will tell, but it seems that another major step has been taken towards production deployment of IPv6 in the enterprise.

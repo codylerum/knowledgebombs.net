@@ -1,11 +1,12 @@
 source 'https://rubygems.org'
 
-gem 'awestruct', '~> 0.5.5'
-gem 'git'
+gem 'awestruct', '0.5.7'
+
 gem 'asciidoctor', '>= 0.1.4'
 gem 'haml'
 gem 'therubyrhino', :platforms => :jruby
-gem 'RedCloth'
 gem 'htmlcompressor'
 gem 'coffee-script'
 gem 'uglifier'
+gem 'git'
+gem 'compass'

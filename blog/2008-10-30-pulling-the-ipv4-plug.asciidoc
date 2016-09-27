@@ -5,7 +5,7 @@ author: Cody Lerum
 email: cody.lerum@gmail.com
 tags: [ IPv6, Microsoft, Windows ]
 ---
-p. Just as a little experiment tonight I disabled my IPv4 stack on Vista and went entirely IPv6 native (no tunneling). Of course I got what I expected, a completly unusable system.
+Just as a little experiment tonight I disabled my IPv4 stack on Vista and went entirely IPv6 native (no tunneling). Of course I got what I expected, a completly unusable system.
 
 *What worked:*
 
@@ -15,6 +15,7 @@ p. Just as a little experiment tonight I disabled my IPv4 stack on Vista and wen
 * www.kame.net - Love to see that turtle dance.
 
 *What didn't work:*
+
 * Basically everything else.
 
-p. If IPv4 is going to run out in 2-3 years, the content providers have a long way to go.
+If IPv4 is going to run out in 2-3 years, the content providers have a long way to go.

@@ -1,0 +1,22 @@
+---
+title: RIPE IPv6 Interviews & IPv6 Advocacy
+layout: blog
+author: Ken Mix
+email: ken@mix.co
+tags: [ IPv6, RIPE ]
+---
+For those interested in the experiences of people that have been deploying and operating in an IPv6 world for quite some time, http://www.ripe.net/[RIPE^] has posted a few interviews with 'net savvy folks on their http://www.youtube.com/user/RIPENCC[YouTube channel^], with promises of more to come.
+
+For those of you having a difficult time convincing your boss that IPv4 exhaustion is real and is something to be prepared for, RIPE has cross-posted the videos on an IPv6 advocacy and information site, http://www.ipv6actnow.org/[http://www.ipv6actnow.org^]. To emphasize the urgency, http://ipv6.he.net/statistics/[Hurricane Electric's IPv6 countdown^] could serve as an excellent visual aid:
+
++++
+<table align="center">
+  <tbody>
+    <tr>
+      <td align="center">
+      <script src="http://ipv6.he.net/v4ex/sidebar.js" type="text/javascript"></script>
+      </td>
+    </tr>
+  </tbody>
+</table>
++++

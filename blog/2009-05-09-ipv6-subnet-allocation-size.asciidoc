@@ -1,0 +1,27 @@
+---
+title: IPv6 Subnet Allocation Size - The Debate (Finally) Rages
+layout: blog
+author: Ken Mix
+email: ken@mix.co
+tags: [ IPv6, ARIN, Addressing ]
+---
+It's been over a decade now since IPv6 was approved as a standard, and people are still arguing about fundamental issues such as subnet allocation sizes and other customer-facing best practices. In my mind, the increased tempo of the argument is a very positive sign, albeit later in the game than most people would have preferred. The fact that so many people are arguing about such a basic operational issue as customer allocations, and that they are soliciting opinions and addressing plans from folks who've already rolled out IPv6 in their networks is a good indicator that more people are finally getting closer to actual IPv6 deployment. Even though with there is still not 100% consensus on some IPv4 "best practices", it will be interesting to see how things shake out -- especially on some of the larger networks.
+
+For those that are curious and/or looking for an addressing plan, section 6.5.4.1 of the ARIN Number Resource Policy Manual (NRPM) provides useful guidelines for IPv6 end-user assignment that I feel make sense from a common-sense, operational point of view. The manual can be found at:
+
+https://www.arin.net/policy/nrpm.html[https://www.arin.net/policy/nrpm.html^]
+
+One of the subjects not covered in the guide are point-to-point (PTP) subnets. There are two schools of thought on this:
+
+. Always allocate a /64 subnet on PTP links. This way, you are not breaking the built-in autoconfiguration capabilities of IPv6. Or,
+. Use something smaller. Personally, I shiver at the thought of allowing auto-configuration on a core (or even important customer access) PTP link. Also, the idea of blowing 2^64 addresses (18,446,744,073,709,551,616) addresses on a PTP link seems awfully wasteful -- harking back to the days of default /8 allocations to folks like the Ford Motor Company and MIT. I like to use /124 subnets as a standard. The nibble boundary makes for easy subnetting, and with 16 available hosts (2^4), it covers 99.9999% of PTP scenarios on my network.
+
+The debate about PTP links is just one small part of a larger argument about IPv6 addressing -- namely, how much waste is too much? Many people argue that there are so many IPv6 addresses that we will never use them all. While I agree that 2^128 (3.402e+38) is a huge number, I don't see a problem with conservation where it makes sense. Nobody knows what the future will hold, and the explosion of the Internet came as a real shock to people who originally thought that we could never utilize all of the addresses in the IPv4 space.  After all, 2^32 (4,294,967,296) is still a pretty big number.
+
+If you'd like to join the debate (or just enjoy the show), the ipv6-ops mailing list is an excellent place to start.  You can join at
+
+http://lists.cluenet.de/mailman/listinfo/ipv6-ops[http://lists.cluenet.de/mailman/listinfo/ipv6-ops^]
+
+There you also find link to the list archives, which make for some interesting late-night reading.
+
+The one constant in IT is change, and I'd be interested in seeing what kind of subnetting/addressing/aggregation plans others have rolled out.
