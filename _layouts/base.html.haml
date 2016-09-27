@@ -9,6 +9,7 @@
     -if page.description != nil
       %meta{:name=>"description", :content=> page.description}
     %meta{ :name=>'viewport', :content=>'width=device-width, initial-scale=1.0' }
+    %link{ :rel=>'icon', :type=>'image/x-icon', :href=>"/favicon.ico"}
     %link{ :rel=>'stylesheet', :type=>'text/css', :href=>'https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css', :integrity=>'sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u', :crossorigin=>'anonymous' }
     %link{ :rel=>'stylesheet', :type=>'text/css', :href=>"#{site.base_url}/stylesheets/theme.css" }
     %link{ :rel=>'alternate',"type" => "application/atom+xml", "title" => "Blog Feed", "href" => "#{site.base_url}/blog/feed.atom"}
@@ -65,11 +66,11 @@
               .well.well-sm
                 .row
                   .col-md-4
-                    %a{:href=>'http://en.gravatar.com/kmix'}
+                    %a{:href=>'//en.gravatar.com/kmix'}
                       %img.img-responsive.floating-page{:src=> '//www.gravatar.com/avatar/' + Digest::MD5.hexdigest( 'ken@mix.co' ), :alt => 'Ken Mix'}
                   .col-md-8
                     <div style="padding-top:3px">
-                    <script type="IN/MemberProfile" data-id="http://www.linkedin.com/in/kenmix" data-format="click" data-text="Ken Mix" data-related="false"></script>
+                    <script type="IN/MemberProfile" data-id="//www.linkedin.com/in/kenmix" data-format="click" data-text="Ken Mix" data-related="false"></script>
                     </div>
                     <div style="padding-top:3px">
                     <a href="//plus.google.com/101925478681357288309?prsrc=3" style="text-decoration:none;">
